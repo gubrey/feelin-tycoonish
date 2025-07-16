@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://db1u8s1mpmh25"]
+[gd_scene load_steps=30 format=3 uid="uid://db1u8s1mpmh25"]
 
 [ext_resource type="PackedScene" uid="uid://bscqrhas5tiqu" path="res://player/player.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_0xm2m"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bpk2j37cdaqhp" path="res://npc/shopkeeper/1.svg" id="13_82xsv"]
 [ext_resource type="Texture2D" uid="uid://ds5puardwgvob" path="res://npc/shopkeeper/2.svg" id="14_getpj"]
 [ext_resource type="Texture2D" uid="uid://bq76tf4yk1fii" path="res://buyables/music_guy/1.svg" id="15_2cqfq"]
+[ext_resource type="Script" uid="uid://blb7iwv8ouwnx" path="res://npc/shopkeeper/shop_keeper.gd" id="15_074og"]
 [ext_resource type="Script" uid="uid://bpr5wkk3pxol0" path="res://buyables/music_guy/music_guy.gd" id="16_074og"]
 [ext_resource type="Texture2D" uid="uid://dy63c55ap7v1l" path="res://buyables/music_guy/2.svg" id="16_yaehf"]
 
@@ -240,6 +241,7 @@ position = Vector2(2112, 431)
 sprite_frames = SubResource("SpriteFrames_ryguw")
 animation = &"dance"
 autoplay = "default"
+script = ExtResource("15_074og")
 
 [node name="Buyable" type="Node2D" parent="."]
 position = Vector2(2537, 98)
