@@ -219,9 +219,16 @@ price = 0
 [node name="WalkerUpgradeButton" parent="." instance=ExtResource("1_2eqjb")]
 position = Vector2(1022, 128)
 buyable_id = "walker0_upgrade0"
-buyable_name = "Potasium Walker Upgrade"
-price = 6
+buyable_name = "Faster Production Speed"
+price = 4
 requires = Array[String](["walker0"])
+
+[node name="WalkerUpgradeButton2" parent="." instance=ExtResource("1_2eqjb")]
+position = Vector2(1022, 128)
+buyable_id = "walker0_upgrade1"
+buyable_name = "More Potasi-Value"
+price = 16
+requires = Array[String](["walker0", "walker0_upgrade0"])
 
 [node name="Walker" type="Node2D" parent="."]
 position = Vector2(558, 120)
@@ -241,7 +248,7 @@ animation = &"idle"
 position = Vector2(2537, 98)
 buyable_id = "music_man"
 buyable_name = "Music"
-price = 12
+price = 20
 
 [node name="MusicBuyable" type="Node2D" parent="."]
 position = Vector2(2537, 98)

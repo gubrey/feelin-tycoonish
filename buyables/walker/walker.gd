@@ -5,6 +5,7 @@ extends Buyable
 @onready var potasium: AnimatedSprite2D = $Potasium
 
 var walking_time: float = 3.0
+var value: int = 2
 
 func _ready():
 	super()
@@ -13,6 +14,9 @@ func _ready():
 func _buyable_bought():
 	if Game.buyable_bought_list.has(id + "_upgrade0"):
 		walking_time = 1.5
+	
+	if Game.buyable_bought_list.has(id + "_upgrade1"):
+		value = 4
 
 func _on_buy():
 	potasium.position = Vector2(-190, -30)
@@ -40,7 +44,7 @@ func _on_buy():
 		# wait for the tween to finish...
 		await tween.finished
 		
-		Game.money += 2
+		Game.money += value
 		# this function takes in global coordinates, so we need to convert it accordingly
 		_play_coin_sound(to_global(Vector2(259, -45)))
 		
