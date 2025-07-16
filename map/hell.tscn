@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://crc7jr6ql6fna"]
+[gd_scene load_steps=22 format=3 uid="uid://crc7jr6ql6fna"]
 
 [ext_resource type="Script" uid="uid://bi7q8kx45r5ul" path="res://buyables/death buyable.gd" id="1_05ulx"]
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_4hjx4"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://bbv8q4kwkanh2" path="res://map/dawko_1.gd" id="16_4hjx4"]
 [ext_resource type="Texture2D" uid="uid://cfqdcb4gp45i6" path="res://map/hell/costume4.svg" id="17_0gfp7"]
 [ext_resource type="Texture2D" uid="uid://big5vvkqvlqx4" path="res://map/hell/costume1.svg" id="19_oobf3"]
+[ext_resource type="Script" uid="uid://cxdg5ouw20ydq" path="res://map/spear.gd" id="20_wv7gc"]
 
 [node name="Hell" type="Node2D"]
 
@@ -304,6 +305,15 @@ position = Vector2(8113.1, 5568.6)
 color = Color(0.74902, 0.392157, 0.0588235, 1)
 polygon = PackedVector2Array(-175, 480, 443, 477, 338, 693, 225, 819, 204, 705, 140, 813, 70.9995, 702, 63.9995, 805, -71.0005, 706)
 
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2(12332.1, 4573.6)
+polygon = PackedVector2Array(-306.1, 761.4, -310.1, 465.4, 1085.9, 462, 1080.9, 760.4, 394.9, 840.4)
+
+[node name="Polygon2D15" type="Polygon2D" parent="Ground"]
+position = Vector2(12197.1, 4558.6)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-175, 480, 1220.9, 477, 1215.9, 775.4, 529.898, 855.4, -172.102, 775.4)
+
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Ground"]
 position = Vector2(9760.1, 5411.6)
 scale = Vector2(2.36, 2.36)
@@ -355,6 +365,72 @@ polygon = PackedVector2Array(-171, 471, -83.0005, 471, -80.0005, 708, -126, 742,
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Ground"]
 position = Vector2(8028, 5594)
+polygon = PackedVector2Array(-310, 700, -309, 465, -221, 465, -218, 701, -264, 736)
+
+[node name="Polygon2D11" type="Polygon2D" parent="Ground"]
+position = Vector2(11355, 4780)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-171, 471, -83.0005, 471, -80.0005, 708, -126, 742, -172, 706)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2(11493, 4786)
+polygon = PackedVector2Array(-310, 700, -309, 465, -221, 465, -218, 701, -264, 736)
+
+[node name="Polygon2D12" type="Polygon2D" parent="Ground"]
+position = Vector2(11555, 4724)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-171, 471, -83.0005, 471, -80.0005, 708, -126, 742, -172, 706)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2(11693, 4730)
+polygon = PackedVector2Array(-310, 700, -309, 465, -221, 465, -218, 701, -264, 736)
+
+[node name="Polygon2D13" type="Polygon2D" parent="Ground"]
+position = Vector2(11755, 4676)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-171, 471, -83.0005, 471, -80.0005, 708, -126, 742, -172, 706)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2(11893, 4682)
+polygon = PackedVector2Array(-310, 700, -309, 465, -221, 465, -218, 701, -264, 736)
+
+[node name="Polygon2D14" type="Polygon2D" parent="Ground"]
+position = Vector2(11957.6, 4632.3)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-171, 471, -83.0005, 471, -80.0005, 708, -126, 742, -172, 706)
+
+[node name="Polygon2D16" type="Polygon2D" parent="Ground"]
+z_index = -1
+position = Vector2(12492.9, 3894.68)
+scale = Vector2(1.54153, 2.05697)
+color = Color(0.75, 0.75, 0.75, 1)
+polygon = PackedVector2Array(-169.889, 446.444, -127.936, 446.444, -83, 446.444, -83, 556, -169.889, 556)
+
+[node name="spear" type="StaticBody2D" parent="Ground"]
+position = Vector2(12304, 4807)
+rotation = 1.5756
+scale = Vector2(0.0805774, 0.547661)
+script = ExtResource("20_wv7gc")
+
+[node name="Polygon2D18" type="Polygon2D" parent="Ground/spear"]
+position = Vector2(-76.7461, 142.471)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="Polygon2D17" type="Polygon2D" parent="Ground/spear"]
+z_index = -1
+position = Vector2(21.7705, 0.396484)
+scale = Vector2(2.26237, 1.41216)
+color = Color(0.442911, 0.442911, 0.44291, 1)
+polygon = PackedVector2Array(-49.6484, 0.0332031, 37.2227, -0.0273438, 42.0547, 147.873, -44.8164, 147.934)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Ground/spear"]
+position = Vector2(-81.4492, 142.014)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2(12095.6, 4638.3)
 polygon = PackedVector2Array(-310, 700, -309, 465, -221, 465, -218, 701, -264, 736)
 
 [node name="Polygon2D2" type="Polygon2D" parent="Ground"]
