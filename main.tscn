@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://db1u8s1mpmh25"]
+[gd_scene load_steps=29 format=3 uid="uid://db1u8s1mpmh25"]
 
 [ext_resource type="PackedScene" uid="uid://bscqrhas5tiqu" path="res://player/player.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_0xm2m"]
@@ -6,6 +6,17 @@
 [ext_resource type="Script" uid="uid://dp4ok5fnw5x2d" path="res://buyables/walker/walker.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c4dnhesc0ffom" path="res://buyables/walker/pot_walk_spritesheet.png" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://bl15qvkrwqnrk" path="res://ui/money_label.gd" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://c3fmf56yeueax" path="res://npc/shopkeeper/bop/1.svg" id="7_w48qg"]
+[ext_resource type="Texture2D" uid="uid://c867gs71ltv5m" path="res://npc/shopkeeper/bop/2.svg" id="8_vivmo"]
+[ext_resource type="Texture2D" uid="uid://di76dijjuboka" path="res://npc/shopkeeper/bop/3.svg" id="9_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://bb1vimvrtgr3" path="res://npc/shopkeeper/bop/4.svg" id="10_yaehf"]
+[ext_resource type="Texture2D" uid="uid://ctg3xgf1vqr1h" path="res://npc/shopkeeper/bop/5.svg" id="11_074og"]
+[ext_resource type="Texture2D" uid="uid://do0scn5xou1oj" path="res://npc/shopkeeper/bop/6.svg" id="12_cegan"]
+[ext_resource type="Texture2D" uid="uid://bpk2j37cdaqhp" path="res://npc/shopkeeper/1.svg" id="13_82xsv"]
+[ext_resource type="Texture2D" uid="uid://ds5puardwgvob" path="res://npc/shopkeeper/2.svg" id="14_getpj"]
+[ext_resource type="Texture2D" uid="uid://bq76tf4yk1fii" path="res://buyables/music_guy/1.svg" id="15_2cqfq"]
+[ext_resource type="Script" uid="uid://bpr5wkk3pxol0" path="res://buyables/music_guy/music_guy.gd" id="16_074og"]
+[ext_resource type="Texture2D" uid="uid://dy63c55ap7v1l" path="res://buyables/music_guy/2.svg" id="16_yaehf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
 atlas = ExtResource("4_1bvp3")
@@ -61,15 +72,114 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 1)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ryguw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_w48qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vivmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2cqfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yaehf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_074og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cegan")
+}],
+"loop": true,
+"name": &"dance",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_82xsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_getpj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_074og"]
+resource_name = "dance"
+loop_mode = 1
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("15_2cqfq"), ExtResource("16_yaehf")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_cegan"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("15_2cqfq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_82xsv"]
+_data = {
+&"RESET": SubResource("Animation_cegan"),
+&"dance": SubResource("Animation_074og")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="BG" type="ColorRect" parent="."]
 offset_left = -1541.0
 offset_top = -1272.0
-offset_right = 2947.0
+offset_right = 4130.0
 offset_bottom = 1736.0
 mouse_filter = 1
-color = Color(0.888134, 0.729646, 0.579009, 1)
+color = Color(0.529412, 0.411765, 0.227451, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_h2yge")]
 position = Vector2(679, 435)
@@ -77,7 +187,7 @@ position = Vector2(679, 435)
 [node name="Ground" type="StaticBody2D" parent="."]
 
 [node name="Polygon2D" type="Polygon2D" parent="Ground"]
-color = Color(0.362534, 0.100643, 0, 1)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
 polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
@@ -95,6 +205,12 @@ buyable_id = "walker0_upgrade0"
 buyable_name = "Potasium Walker Upgrade"
 price = 10
 requires = Array[String](["walker0"])
+
+[node name="BuyableButton3" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(2537, 98)
+buyable_id = "music_man"
+buyable_name = "Music"
+price = 0
 
 [node name="Walker" type="Node2D" parent="."]
 position = Vector2(558, 120)
@@ -118,3 +234,26 @@ offset_bottom = 23.0
 text = "MONEY: 0$"
 label_settings = SubResource("LabelSettings_lquwl")
 script = ExtResource("6_7mycd")
+
+[node name="shopKeeper" type="AnimatedSprite2D" parent="."]
+position = Vector2(2112, 431)
+sprite_frames = SubResource("SpriteFrames_ryguw")
+animation = &"dance"
+autoplay = "default"
+
+[node name="Buyable" type="Node2D" parent="."]
+position = Vector2(2537, 98)
+script = ExtResource("16_074og")
+id = "music_man"
+metadata/_custom_type_script = "uid://de7j141xed3p4"
+
+[node name="musicGuy" type="Sprite2D" parent="Buyable"]
+position = Vector2(-178, 352)
+scale = Vector2(0.500001, 0.504167)
+texture = ExtResource("15_2cqfq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buyable/musicGuy"]
+libraries = {
+&"": SubResource("AnimationLibrary_82xsv")
+}
+autoplay = "dance"
