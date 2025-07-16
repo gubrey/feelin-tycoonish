@@ -323,6 +323,7 @@ polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2
 position = Vector2(-2170, 5945)
 script = ExtResource("4_jq2sk")
 id = "deathbutton"
+stay_on_buy = true
 metadata/_custom_type_script = "uid://de7j141xed3p4"
 
 [node name="DeathButton" parent="Map/Hell" instance=ExtResource("2_0xm2m")]

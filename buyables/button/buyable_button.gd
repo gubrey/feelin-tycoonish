@@ -86,7 +86,12 @@ func _buy_buyable():
 	
 	audio_player.stream = BUY_SUCCESS # same as before but with "BUY_SUCCESS"
 	audio_player.play()
-	if stay_on_buy: return
+	
+	# stupid code that im too tired to explain sorry
+	if stay_on_buy: 
+		Game.buyable_bought_list.remove_at(Game.buyable_bought_list.find(buyable_id))
+		return
+	
 	visible = false # hide the buyable
 	# now, normally we would call "queue_free()" right here to delete the node
 	# but, we're playing a sound, and deleting the node would stop the sound

@@ -4,6 +4,7 @@ class_name Buyable
 # the id of your buyable
 # make sure this is the same as the button ID!!
 @export var id: String = ""
+@export var stay_on_buy: bool = false
 
 var has_been_bought:bool = false
 
@@ -25,7 +26,9 @@ func _check_if_bought():
 	# dont run this again if we've already bought it
 	if has_been_bought: return
 	
-	has_been_bought = true
+	if not stay_on_buy:
+		has_been_bought = true
+	
 	visible = true
 	process_mode = Node.PROCESS_MODE_INHERIT
 	_on_buy()
