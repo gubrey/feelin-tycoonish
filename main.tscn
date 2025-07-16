@@ -295,7 +295,11 @@ libraries = {
 }
 autoplay = "dance"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map/Start/MusicBuyable"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map/Start/MusicBuyable/MusicGuy"]
+position = Vector2(-24, 15.8678)
+scale = Vector2(2, 1.98347)
+max_distance = 3500.0
+attenuation = 0.0457528
 
 [node name="ShopKeeper" type="Sprite2D" parent="Map/Start"]
 position = Vector2(2112, 431)
@@ -471,7 +475,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
 offset_top = 5.0
-offset_right = -987.0
+offset_right = -428.0
 offset_bottom = -601.0
 grow_horizontal = 2
 grow_vertical = 2
