@@ -1,4 +1,6 @@
-extends AnimatedSprite2D
+extends Sprite2D
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 var isdancing = false
 
 func _ready() -> void:
@@ -6,5 +8,5 @@ func _ready() -> void:
 
 func onbuyablebought():
 	if Game.buyable_bought_list.has('music_man') and not isdancing:
-		play("dance")
+		animation_player.play("bop")
 		isdancing = true

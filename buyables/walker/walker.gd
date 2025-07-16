@@ -11,7 +11,7 @@ func _ready():
 
 func _buyable_bought():
 	if Game.buyable_bought_list.has(id + "_upgrade0"):
-		walking_time = 2.0
+		walking_time = 1.5
 
 func _on_buy():
 	potasium.position = Vector2(-190, -30)
@@ -39,7 +39,7 @@ func _on_buy():
 		# wait for the tween to finish...
 		await tween.finished
 		
-		Game.money += 5
+		Game.money += 2
 		
 		# plays his idle animation
 		potasium.play("idle")
