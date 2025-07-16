@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crhvgvna8qj6c"
+path="res://.godot/imported/Hit It.ogg-6280aa15532de332b1c2b4b94c20fff1.oggvorbisstr"
+
+[deps]
+
+source_file="res://buyables/music_guy/music/Hit It.ogg"
+dest_files=["res://.godot/imported/Hit It.ogg-6280aa15532de332b1c2b4b94c20fff1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
