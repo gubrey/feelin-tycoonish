@@ -3,6 +3,7 @@
 extends Buyable
 
 @onready var potasium: AnimatedSprite2D = $Potasium
+
 var walking_time: float = 3.0
 
 func _ready():
@@ -40,6 +41,8 @@ func _on_buy():
 		await tween.finished
 		
 		Game.money += 2
+		# this function takes in global coordinates, so we need to convert it accordingly
+		_play_coin_sound(to_global(Vector2(259, -45)))
 		
 		# plays his idle animation
 		potasium.play("idle")
