@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8cwiuu853e6k"
+path="res://.godot/imported/Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3-a8c529d7a6d68856752b3901bb6630a4.mp3str"
+
+[deps]
+
+source_file="res://Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3"
+dest_files=["res://.godot/imported/Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3-a8c529d7a6d68856752b3901bb6630a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

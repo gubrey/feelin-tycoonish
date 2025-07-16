@@ -37,6 +37,7 @@ const BUY_FAIL = preload("res://buyables/button/buy_fail.mp3")
 
 # the list of IDs this button requires to be bought before showing
 @export var requires: Array[String] = []
+@export var stay_on_buy: bool = false
 
 @onready var text_name: RichTextLabel = $TextName
 @onready var button: Area2D = $Button
@@ -82,11 +83,11 @@ func _buy_buyable():
 	
 	# call the function to tell the game that we've bought this buyable
 	Game.buy_buyable(buyable_id)
-	visible = false # hide the buyable
 	
 	audio_player.stream = BUY_SUCCESS # same as before but with "BUY_SUCCESS"
 	audio_player.play()
-	
+	if stay_on_buy: return
+	visible = false # hide the buyable
 	# now, normally we would call "queue_free()" right here to delete the node
 	# but, we're playing a sound, and deleting the node would stop the sound
 	# so we have to wait for the sound to finish before deleting the node
