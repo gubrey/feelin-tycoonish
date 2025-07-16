@@ -407,13 +407,13 @@ color = Color(0.75, 0.75, 0.75, 1)
 polygon = PackedVector2Array(-169.889, 446.444, -127.936, 446.444, -83, 446.444, -83, 556, -169.889, 556)
 
 [node name="spear" type="StaticBody2D" parent="Ground"]
-position = Vector2(12304, 4807)
+position = Vector2(12304, 4927)
 rotation = 1.5756
 scale = Vector2(0.0805774, 0.547661)
 script = ExtResource("20_wv7gc")
 
 [node name="Polygon2D18" type="Polygon2D" parent="Ground/spear"]
-position = Vector2(-76.7461, 142.471)
+position = Vector2(-73.8867, 209.27)
 scale = Vector2(1.98434, 2.6035)
 polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
 
@@ -422,10 +422,100 @@ z_index = -1
 position = Vector2(21.7705, 0.396484)
 scale = Vector2(2.26237, 1.41216)
 color = Color(0.442911, 0.442911, 0.44291, 1)
-polygon = PackedVector2Array(-49.6484, 0.0332031, 37.2227, -0.0273438, 42.0547, 147.873, -44.8164, 147.934)
+polygon = PackedVector2Array(-49.6484, 0.0332031, 37.2227, -0.0273438, 42.0547, 147.873, 17.1484, 236.313, -44.8164, 147.934)
 
 [node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Ground/spear"]
-position = Vector2(-81.4492, 142.014)
+position = Vector2(-78.5898, 208.811)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="Polygon2D17" type="Polygon2D" parent="Ground"]
+z_index = -1
+position = Vector2(12804.9, 3894.68)
+scale = Vector2(1.54153, 2.05697)
+color = Color(0.75, 0.75, 0.75, 1)
+polygon = PackedVector2Array(-169.889, 446.444, -127.936, 446.444, -83, 446.444, -83, 556, -169.889, 556)
+
+[node name="spear2" type="StaticBody2D" parent="Ground"]
+position = Vector2(12616, 4927)
+rotation = 1.5756
+scale = Vector2(0.0805774, 0.547661)
+script = ExtResource("20_wv7gc")
+
+[node name="Polygon2D18" type="Polygon2D" parent="Ground/spear2"]
+position = Vector2(-73.8867, 209.27)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="Polygon2D17" type="Polygon2D" parent="Ground/spear2"]
+z_index = -1
+position = Vector2(21.7705, 0.396484)
+scale = Vector2(2.26237, 1.41216)
+color = Color(0.442911, 0.442911, 0.44291, 1)
+polygon = PackedVector2Array(-49.6484, 0.0332031, 37.2227, -0.0273438, 42.0547, 147.873, 17.1484, 236.313, -44.8164, 147.934)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Ground/spear2"]
+position = Vector2(-78.5898, 208.811)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="Polygon2D18" type="Polygon2D" parent="Ground"]
+z_index = -1
+position = Vector2(13108.9, 3894.68)
+scale = Vector2(1.54153, 2.05697)
+color = Color(0.75, 0.75, 0.75, 1)
+polygon = PackedVector2Array(-169.889, 446.444, -127.936, 446.444, -83, 446.444, -83, 556, -169.889, 556)
+
+[node name="spear3" type="StaticBody2D" parent="Ground"]
+position = Vector2(12920, 4927)
+rotation = 1.5756
+scale = Vector2(0.0805774, 0.547661)
+script = ExtResource("20_wv7gc")
+
+[node name="Polygon2D18" type="Polygon2D" parent="Ground/spear3"]
+position = Vector2(-73.8867, 209.27)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="Polygon2D17" type="Polygon2D" parent="Ground/spear3"]
+z_index = -1
+position = Vector2(21.7705, 0.396484)
+scale = Vector2(2.26237, 1.41216)
+color = Color(0.442911, 0.442911, 0.44291, 1)
+polygon = PackedVector2Array(-49.6484, 0.0332031, 37.2227, -0.0273438, 42.0547, 147.873, 17.1484, 236.313, -44.8164, 147.934)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Ground/spear3"]
+position = Vector2(-78.5898, 208.811)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="Polygon2D19" type="Polygon2D" parent="Ground"]
+z_index = -1
+position = Vector2(13412.9, 3894.68)
+scale = Vector2(1.54153, 2.05697)
+color = Color(0.75, 0.75, 0.75, 1)
+polygon = PackedVector2Array(-169.889, 446.444, -127.936, 446.444, -83, 446.444, -83, 556, -169.889, 556)
+
+[node name="spear4" type="StaticBody2D" parent="Ground"]
+position = Vector2(13224, 4927)
+rotation = 1.5756
+scale = Vector2(0.0805774, 0.547661)
+script = ExtResource("20_wv7gc")
+
+[node name="Polygon2D18" type="Polygon2D" parent="Ground/spear4"]
+position = Vector2(-73.8867, 209.27)
+scale = Vector2(1.98434, 2.6035)
+polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
+
+[node name="Polygon2D17" type="Polygon2D" parent="Ground/spear4"]
+z_index = -1
+position = Vector2(21.7705, 0.396484)
+scale = Vector2(2.26237, 1.41216)
+color = Color(0.442911, 0.442911, 0.44291, 1)
+polygon = PackedVector2Array(-49.6484, 0.0332031, 37.2227, -0.0273438, 42.0547, 147.873, 17.1484, 236.313, -44.8164, 147.934)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Ground/spear4"]
+position = Vector2(-78.5898, 208.811)
 scale = Vector2(1.98434, 2.6035)
 polygon = PackedVector2Array(136.461, -1.92188, 49.8203, 5.44141, -49.6367, 0.0351563, 64.4961, 74.8203)
 
