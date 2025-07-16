@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bscqrhas5tiqu" path="res://player/player.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_0xm2m"]
-[ext_resource type="AudioStream" uid="uid://b8cwiuu853e6k" path="res://Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3" id="2_htxhm"]
+[ext_resource type="AudioStream" uid="uid://b8cwiuu853e6k" path="res://map/hell/Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3" id="2_htxhm"]
 [ext_resource type="Texture2D" uid="uid://c30tbxn6synlx" path="res://buyables/walker/stage.svg" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://dp4ok5fnw5x2d" path="res://buyables/walker/walker.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c4dnhesc0ffom" path="res://buyables/walker/pot_walk_spritesheet.png" id="4_1bvp3"]
-[ext_resource type="Script" path="res://death buyable.gd" id="4_jq2sk"]
+[ext_resource type="Script" uid="uid://bi7q8kx45r5ul" path="res://buyables/death buyable.gd" id="4_jq2sk"]
 [ext_resource type="Script" uid="uid://bl15qvkrwqnrk" path="res://ui/money_label.gd" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c3fmf56yeueax" path="res://npc/shopkeeper/bop/1.svg" id="7_w48qg"]
 [ext_resource type="Texture2D" uid="uid://c867gs71ltv5m" path="res://npc/shopkeeper/bop/2.svg" id="8_vivmo"]
@@ -20,19 +20,19 @@
 [ext_resource type="Script" uid="uid://blb7iwv8ouwnx" path="res://npc/shopkeeper/shop_keeper.gd" id="15_074og"]
 [ext_resource type="Script" uid="uid://bpr5wkk3pxol0" path="res://buyables/music_guy/music_guy.gd" id="16_074og"]
 [ext_resource type="Texture2D" uid="uid://dy63c55ap7v1l" path="res://buyables/music_guy/2.svg" id="16_yaehf"]
-[ext_resource type="Texture2D" uid="uid://bd7xgi03xif6i" path="res://sponge 1.png" id="19_seu75"]
-[ext_resource type="Texture2D" uid="uid://ikecg1tctjsm" path="res://sponge 2.png" id="20_htxhm"]
-[ext_resource type="Texture2D" uid="uid://cp0j1q3uikte0" path="res://sponge 3.png" id="21_jq2sk"]
-[ext_resource type="Texture2D" uid="uid://4qwt32l80ctg" path="res://sponge 4.png" id="22_4k2k6"]
-[ext_resource type="Texture2D" uid="uid://bj1g7ei4iyog0" path="res://sponge 5.png" id="23_0rl1p"]
-[ext_resource type="Texture2D" uid="uid://b3sbydiijxs2r" path="res://sponge 6.png" id="24_ok6jj"]
-[ext_resource type="Texture2D" uid="uid://cfr8lsxnpdt7d" path="res://sponge 7.png" id="25_facbu"]
-[ext_resource type="Texture2D" uid="uid://bft8682ccfn5h" path="res://sponge 8.png" id="26_b1qrp"]
-[ext_resource type="Texture2D" uid="uid://dmmms8ymupqej" path="res://sponge 9.png" id="27_come4"]
-[ext_resource type="Texture2D" uid="uid://d1hahludg4ygf" path="res://sponge 10.png" id="28_h8e4i"]
-[ext_resource type="Texture2D" uid="uid://negygyvqpiq2" path="res://sponge 11.png" id="29_4lmeg"]
-[ext_resource type="Texture2D" uid="uid://4rirvg268xtu" path="res://sponge 12.png" id="30_0cp0l"]
-[ext_resource type="Texture2D" uid="uid://b75r6ot06rweo" path="res://dawko 1.png" id="31_d2t1y"]
+[ext_resource type="Texture2D" uid="uid://bd7xgi03xif6i" path="res://map/hell/sponge 1.png" id="19_seu75"]
+[ext_resource type="Texture2D" uid="uid://ikecg1tctjsm" path="res://map/hell/sponge 2.png" id="20_htxhm"]
+[ext_resource type="Texture2D" uid="uid://cp0j1q3uikte0" path="res://map/hell/sponge 3.png" id="21_jq2sk"]
+[ext_resource type="Texture2D" uid="uid://4qwt32l80ctg" path="res://map/hell/sponge 4.png" id="22_4k2k6"]
+[ext_resource type="Texture2D" uid="uid://bj1g7ei4iyog0" path="res://map/hell/sponge 5.png" id="23_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://b3sbydiijxs2r" path="res://map/hell/sponge 6.png" id="24_ok6jj"]
+[ext_resource type="Texture2D" uid="uid://cfr8lsxnpdt7d" path="res://map/hell/sponge 7.png" id="25_facbu"]
+[ext_resource type="Texture2D" uid="uid://bft8682ccfn5h" path="res://map/hell/sponge 8.png" id="26_b1qrp"]
+[ext_resource type="Texture2D" uid="uid://dmmms8ymupqej" path="res://map/hell/sponge 9.png" id="27_come4"]
+[ext_resource type="Texture2D" uid="uid://d1hahludg4ygf" path="res://map/hell/sponge 10.png" id="28_h8e4i"]
+[ext_resource type="Texture2D" uid="uid://negygyvqpiq2" path="res://map/hell/sponge 11.png" id="29_4lmeg"]
+[ext_resource type="Texture2D" uid="uid://4rirvg268xtu" path="res://map/hell/sponge 12.png" id="30_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://b75r6ot06rweo" path="res://map/hell/dawko 1.png" id="31_d2t1y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
 atlas = ExtResource("4_1bvp3")
@@ -144,24 +144,6 @@ _data = {
 &"dance": SubResource("Animation_074og")
 }
 
-[sub_resource type="Animation" id="Animation_a6jrf"]
-resource_name = "idle"
-length = 0.40002
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("13_82xsv"), ExtResource("14_getpj")]
-}
-
 [sub_resource type="Animation" id="Animation_xuqvo"]
 length = 0.001
 tracks/0/type = "value"
@@ -216,6 +198,24 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2(0, 0), Vector2(-17.035, 9.4), Vector2(-19.98, 13.205), Vector2(-15, 6.27), Vector2(-9.535, 3.825), Vector2(-3.305, 1.965)]
+}
+
+[sub_resource type="Animation" id="Animation_a6jrf"]
+resource_name = "idle"
+length = 0.40002
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("13_82xsv"), ExtResource("14_getpj")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qsp4k"]

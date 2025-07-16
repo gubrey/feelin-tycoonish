@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp0j1q3uikte0"
-path="res://.godot/imported/sponge 3.png-6a68e4696b78ddc61bb59cb96227a853.ctex"
+uid="uid://b75r6ot06rweo"
+path="res://.godot/imported/dawko 1.png-3113fdfb25f41ad6856412011bcde5d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sponge 3.png"
-dest_files=["res://.godot/imported/sponge 3.png-6a68e4696b78ddc61bb59cb96227a853.ctex"]
+source_file="res://map/hell/dawko 1.png"
+dest_files=["res://.godot/imported/dawko 1.png-3113fdfb25f41ad6856412011bcde5d7.ctex"]
 
 [params]
 

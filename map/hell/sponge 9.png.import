@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmmms8ymupqej"
-path="res://.godot/imported/sponge 9.png-4760b6a3d9c8b1dc96664c1f30d33877.ctex"
+path="res://.godot/imported/sponge 9.png-7edaa1094788f8f837c7e7100a340ff4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sponge 9.png"
-dest_files=["res://.godot/imported/sponge 9.png-4760b6a3d9c8b1dc96664c1f30d33877.ctex"]
+source_file="res://map/hell/sponge 9.png"
+dest_files=["res://.godot/imported/sponge 9.png-7edaa1094788f8f837c7e7100a340ff4.ctex"]
 
 [params]
 

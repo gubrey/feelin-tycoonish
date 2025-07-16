@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3sbydiijxs2r"
-path="res://.godot/imported/sponge 6.png-41f4467271a065deedaf623f44e6cb7f.ctex"
+uid="uid://negygyvqpiq2"
+path="res://.godot/imported/sponge 11.png-a829b3baf59fd6256cdb17e6e66d1c52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sponge 6.png"
-dest_files=["res://.godot/imported/sponge 6.png-41f4467271a065deedaf623f44e6cb7f.ctex"]
+source_file="res://map/hell/sponge 11.png"
+dest_files=["res://.godot/imported/sponge 11.png-a829b3baf59fd6256cdb17e6e66d1c52.ctex"]
 
 [params]
 
