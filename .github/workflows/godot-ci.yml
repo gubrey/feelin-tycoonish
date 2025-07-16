@@ -4,9 +4,9 @@ on: push
 # NOTE: If your `project.godot` is at the repository root, set `PROJECT_PATH` below to ".".
 
 env:
-  GODOT_VERSION: 4.3
-  EXPORT_NAME: test-project
-  PROJECT_PATH: test-project
+  GODOT_VERSION: 4.4
+  EXPORT_NAME: tycoonish
+  PROJECT_PATH: .
 
 jobs:
   export-web:
