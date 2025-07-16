@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk3105wepu4p0"]
+
+[ext_resource type="Script" uid="uid://wrkbh7nm1aws" path="res://buyables/button/buyable_button.gd" id="1_jq050"]
+[ext_resource type="Texture2D" uid="uid://mhppamahr5hp" path="res://buyables/button/button.svg" id="2_cap8g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
+radius = 90.7965
+
+[node name="BuyableButton" type="Node2D"]
+script = ExtResource("1_jq050")
+
+[node name="Button" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+texture = ExtResource("2_cap8g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
+shape = SubResource("CircleShape2D_1bvp3")
+
+[node name="TextName" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = -255.0
+offset_top = 103.0
+offset_right = 261.0
+offset_bottom = 150.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "Buy Thing"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Price" type="RichTextLabel" parent="TextName"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -258.0
+offset_top = 9.0
+offset_right = 258.0
+offset_bottom = 56.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+text = "99999999999$"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+
+[connection signal="input_event" from="Button" to="." method="_on_button_input_event"]
