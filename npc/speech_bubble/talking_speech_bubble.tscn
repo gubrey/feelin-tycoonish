@@ -10,6 +10,5 @@ text = "fddsdf"
 
 [node name="SpeechText" parent="." index="1"]
 offset_right = 152.0
-text = ""
 
 [node name="TalkPlayer" type="AudioStreamPlayer2D" parent="." index="2"]

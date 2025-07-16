@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_4hjx4"]
 [ext_resource type="Texture2D" uid="uid://bd7xgi03xif6i" path="res://map/hell/sponge 1.png" id="3_0gfp7"]
 [ext_resource type="Texture2D" uid="uid://ikecg1tctjsm" path="res://map/hell/sponge 2.png" id="4_oobf3"]
-[ext_resource type="Script" uid="uid://ck0su03wwl836" path="res://map/sponge_13.gd" id="4_tn6sd"]
+[ext_resource type="Script" uid="uid://ck0su03wwl836" path="res://map/hell/sponge_13.gd" id="4_tn6sd"]
 [ext_resource type="Texture2D" uid="uid://cp0j1q3uikte0" path="res://map/hell/sponge 3.png" id="5_tn6sd"]
 [ext_resource type="Texture2D" uid="uid://4qwt32l80ctg" path="res://map/hell/sponge 4.png" id="6_wv7gc"]
 [ext_resource type="Texture2D" uid="uid://bj1g7ei4iyog0" path="res://map/hell/sponge 5.png" id="7_awhbo"]
@@ -17,10 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://4rirvg268xtu" path="res://map/hell/sponge 12.png" id="14_25rhc"]
 [ext_resource type="Texture2D" uid="uid://b75r6ot06rweo" path="res://map/hell/dawko 1.png" id="15_c7ooc"]
 [ext_resource type="AudioStream" uid="uid://b8cwiuu853e6k" path="res://map/hell/Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3" id="16_3eect"]
-[ext_resource type="Script" uid="uid://bbv8q4kwkanh2" path="res://map/dawko_1.gd" id="16_4hjx4"]
+[ext_resource type="Script" uid="uid://bbv8q4kwkanh2" path="res://map/hell/dawko_1.gd" id="16_4hjx4"]
 [ext_resource type="Texture2D" uid="uid://cfqdcb4gp45i6" path="res://map/hell/costume4.svg" id="17_0gfp7"]
 [ext_resource type="Texture2D" uid="uid://big5vvkqvlqx4" path="res://map/hell/costume1.svg" id="19_oobf3"]
-[ext_resource type="Script" uid="uid://cxdg5ouw20ydq" path="res://map/spear.gd" id="20_wv7gc"]
+[ext_resource type="Script" uid="uid://cxdg5ouw20ydq" path="res://map/hell/spear.gd" id="20_wv7gc"]
 
 [node name="Hell" type="Node2D"]
 
@@ -280,13 +280,6 @@ script = ExtResource("16_4hjx4")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 
-[node name="Polygon2D" type="Polygon2D" parent="Ground"]
-color = Color(0.74902, 0.392157, 0.0588235, 1)
-polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
-polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
-
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Ground"]
 position = Vector2(6961, 5717)
 polygon = PackedVector2Array(-206, 691, -309, 465, 308, 462, 203, 678, 90, 804, -71, 790)
@@ -529,8 +522,8 @@ color = Color(0.74902, 0.392157, 0.0588235, 1)
 polygon = PackedVector2Array(-175, 480, 9039.4, 472.6, 8992.4, 761.6, -71, 790)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Ground"]
-position = Vector2(-2560.4, 5691.4)
-polygon = PackedVector2Array(-161.6, 483.6, 9048.4, 461.6, 9021.4, 761.6, -71, 790)
+position = Vector2(-2547.4, 5695.4)
+polygon = PackedVector2Array(-175, 480, 9039.4, 472.6, 8992.4, 761.6, -71, 790)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D3"]
 position = Vector2(4872.4, 684.6)
