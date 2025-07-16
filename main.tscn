@@ -40,5 +40,3 @@ grow_vertical = 2
 text = "MONEY: 0$"
 label_settings = SubResource("LabelSettings_lquwl")
 script = ExtResource("6_7mycd")
-
-[node name="my FUCKING NODE" type="Node2D" parent="."]
