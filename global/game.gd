@@ -31,3 +31,11 @@ signal buyable_bought
 func buy_buyable(id: String) -> void:
 	buyable_bought_list.append(id)
 	buyable_bought.emit()
+
+func _process(_delta: float) -> void:
+	# if we're holding TAB (defined in project settings)
+	if Input.is_action_pressed("debug_speed") and OS.is_debug_build():
+		Engine.time_scale = 25
+	else:
+		Engine.time_scale = 1
+	
