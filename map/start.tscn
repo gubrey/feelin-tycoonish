@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cmubwil3dph06"]
+[gd_scene load_steps=33 format=3 uid="uid://cmubwil3dph06"]
 
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="1_2eqjb"]
 [ext_resource type="Script" uid="uid://dp4ok5fnw5x2d" path="res://buyables/walker/walker.gd" id="2_oawyc"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://ctg3xgf1vqr1h" path="res://npc/shopkeeper/bop/5.svg" id="14_vokrm"]
 [ext_resource type="Texture2D" uid="uid://do0scn5xou1oj" path="res://npc/shopkeeper/bop/6.svg" id="15_0pq1w"]
 [ext_resource type="Texture2D" uid="uid://ds5puardwgvob" path="res://npc/shopkeeper/2.svg" id="16_jihfo"]
+[ext_resource type="PackedScene" uid="uid://ca1pjtml30rad" path="res://npc/speech_bubble/talking_speech_bubble.tscn" id="17_oawyc"]
+[ext_resource type="AudioStream" uid="uid://qost6xonh85d" path="res://npc/shopkeeper/ouiyer.wav" id="18_p5ndp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
 atlas = ExtResource("4_repp3")
@@ -208,6 +210,9 @@ _data = {
 &"idle": SubResource("Animation_a6jrf")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oawyc"]
+size = Vector2(106, 132)
+
 [node name="Start" type="Node2D"]
 
 [node name="WalkerButton" parent="." instance=ExtResource("1_2eqjb")]
@@ -284,6 +289,20 @@ libraries = {
 }
 autoplay = "idle"
 
+[node name="TalkingSpeechBubble" parent="ShopKeeper" instance=ExtResource("17_oawyc")]
+offset_left = 20.0
+offset_top = -156.0
+offset_right = 200.0
+offset_bottom = -80.0
+sound = ExtResource("18_p5ndp")
+text = "i am ouiyer"
+
+[node name="TalkHitbox" type="Area2D" parent="ShopKeeper"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopKeeper/TalkHitbox"]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_oawyc")
+
 [node name="Ground" type="StaticBody2D" parent="."]
 
 [node name="Polygon2D" type="Polygon2D" parent="Ground"]
@@ -292,3 +311,5 @@ polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
 polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[connection signal="body_entered" from="ShopKeeper/TalkHitbox" to="ShopKeeper" method="_on_talk_hitbox_body_entered"]

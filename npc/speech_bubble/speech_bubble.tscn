@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://u8oxsbviql6r"]
+
+[ext_resource type="Texture2D" uid="uid://dn807p8mydxdn" path="res://npc/bubble.svg" id="1_yhew7"]
+[ext_resource type="Script" uid="uid://ckgt8840r5s0b" path="res://npc/speech_bubble/speech_bubble.gd" id="2_e6t1q"]
+[ext_resource type="Texture2D" uid="uid://dooruwuy5x4i6" path="res://npc/tail.svg" id="3_q06lk"]
+[ext_resource type="Theme" uid="uid://rfqqdxbqlj2b" path="res://npc/speech_bubble/bubble_theme.tres" id="4_yjua7"]
+
+[node name="SpeechBubble" type="NinePatchRect"]
+custom_minimum_size = Vector2(180, 75)
+offset_right = 180.0
+offset_bottom = 75.0
+texture = ExtResource("1_yhew7")
+patch_margin_left = 35
+patch_margin_top = 33
+patch_margin_right = 34
+patch_margin_bottom = 30
+script = ExtResource("2_e6t1q")
+
+[node name="Tail" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.477
+offset_top = -12.86
+offset_right = 62.477
+offset_bottom = 27.14
+texture = ExtResource("3_q06lk")
+
+[node name="SpeechText" type="RichTextLabel" parent="."]
+layout_mode = 1
+offset_left = 27.0
+offset_top = 28.0
+offset_right = 27.0
+offset_bottom = 28.0
+theme = ExtResource("4_yjua7")
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0

@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://rfqqdxbqlj2b"]
+
+[ext_resource type="FontFile" uid="uid://dq20i6jcajkqi" path="res://font/HelveticaNeueBold.otf" id="1_nbwgo"]
+[ext_resource type="FontFile" uid="uid://djxpmspmedw8f" path="res://font/HelveticaNeueBoldItalic.otf" id="2_a5j4h"]
+[ext_resource type="FontFile" uid="uid://shgmv8eyxl2e" path="res://font/HelveticaNeueMediumItalic.otf" id="3_je80w"]
+[ext_resource type="FontFile" uid="uid://cf57prss61a0" path="res://font/HelveticaNeueMedium.otf" id="4_xh2e5"]
+
+[resource]
+RichTextLabel/colors/default_color = Color(0.341176, 0.368627, 0.458824, 1)
+RichTextLabel/font_sizes/normal_font_size = 25
+RichTextLabel/fonts/bold_font = ExtResource("1_nbwgo")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_a5j4h")
+RichTextLabel/fonts/italics_font = ExtResource("3_je80w")
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = ExtResource("4_xh2e5")

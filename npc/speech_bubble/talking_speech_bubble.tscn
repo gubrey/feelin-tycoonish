@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca1pjtml30rad"]
+
+[ext_resource type="PackedScene" uid="uid://u8oxsbviql6r" path="res://npc/speech_bubble/speech_bubble.tscn" id="1_bpgge"]
+[ext_resource type="Script" uid="uid://cbipdic24v3iu" path="res://npc/speech_bubble/talking_speech_bubble.gd" id="2_5fe60"]
+
+[node name="TalkingSpeechBubble" instance=ExtResource("1_bpgge")]
+script = ExtResource("2_5fe60")
+sound = null
+text = "fddsdf"
+
+[node name="SpeechText" parent="." index="1"]
+offset_right = 152.0
+text = ""
+
+[node name="TalkPlayer" type="AudioStreamPlayer2D" parent="." index="2"]
