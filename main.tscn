@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c30tbxn6synlx" path="res://buyables/walker/stage.svg" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://dp4ok5fnw5x2d" path="res://buyables/walker/walker.gd" id="3_lquwl"]
 [ext_resource type="Texture2D" uid="uid://c4dnhesc0ffom" path="res://buyables/walker/pot_walk_spritesheet.png" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://bi7q8kx45r5ul" path="res://death buyable.gd" id="4_jq2sk"]
+[ext_resource type="Script" path="res://death buyable.gd" id="4_jq2sk"]
 [ext_resource type="Script" uid="uid://bl15qvkrwqnrk" path="res://ui/money_label.gd" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c3fmf56yeueax" path="res://npc/shopkeeper/bop/1.svg" id="7_w48qg"]
 [ext_resource type="Texture2D" uid="uid://c867gs71ltv5m" path="res://npc/shopkeeper/bop/2.svg" id="8_vivmo"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bpk2j37cdaqhp" path="res://npc/shopkeeper/1.svg" id="13_82xsv"]
 [ext_resource type="Texture2D" uid="uid://ds5puardwgvob" path="res://npc/shopkeeper/2.svg" id="14_getpj"]
 [ext_resource type="Texture2D" uid="uid://bq76tf4yk1fii" path="res://buyables/music_guy/1.svg" id="15_2cqfq"]
-[ext_resource type="Script" uid="uid://blb7iwv8ouwnx" path="res://npc/shopkeeper/shop_keeper.gd" id="15_074og"]
+[ext_resource type="Script" path="res://npc/shopkeeper/shop_keeper.gd" id="15_074og"]
 [ext_resource type="Script" uid="uid://bpr5wkk3pxol0" path="res://buyables/music_guy/music_guy.gd" id="16_074og"]
 [ext_resource type="Texture2D" uid="uid://dy63c55ap7v1l" path="res://buyables/music_guy/2.svg" id="16_yaehf"]
 [ext_resource type="Texture2D" uid="uid://bd7xgi03xif6i" path="res://sponge 1.png" id="19_seu75"]
@@ -82,49 +82,6 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
-font_size = 30
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)
-shadow_color = Color(0, 0, 0, 1)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ryguw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_w48qg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_vivmo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_2cqfq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_yaehf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_074og")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_cegan")
-}],
-"loop": true,
-"name": &"dance",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_82xsv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_getpj")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="Animation" id="Animation_cegan"]
 length = 0.001
 tracks/0/type = "value"
@@ -187,6 +144,49 @@ _data = {
 &"dance": SubResource("Animation_074og")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ryguw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_w48qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vivmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2cqfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yaehf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_074og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cegan")
+}],
+"loop": true,
+"name": &"dance",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_82xsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_getpj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 30
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="BG" type="ColorRect" parent="."]
@@ -197,107 +197,222 @@ offset_bottom = 1736.0
 mouse_filter = 1
 color = Color(0.529412, 0.411765, 0.227451, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(679, 435)
+[node name="Map" type="Node2D" parent="."]
 
-[node name="Ground" type="StaticBody2D" parent="."]
+[node name="Start" type="Node2D" parent="Map"]
 
-[node name="Polygon2D" type="Polygon2D" parent="Ground"]
-color = Color(0.74902, 0.392157, 0.0588235, 1)
-polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
-polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
-
-[node name="Polygon2D2" type="Polygon2D" parent="Ground"]
-position = Vector2(-2547.4, 5695.4)
-color = Color(0.74902, 0.392157, 0.0588235, 1)
-polygon = PackedVector2Array(-175, 480, 9039.4, 472.6, 8992.4, 761.6, -71, 790)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Ground"]
-position = Vector2(-2560.4, 5691.4)
-polygon = PackedVector2Array(-161.6, 483.6, 9048.4, 461.6, 9021.4, 761.6, -71, 790)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
-position = Vector2(4872.4, 684.6)
-scale = Vector2(-0.991567, -2.87558)
-stream = ExtResource("2_htxhm")
-autoplay = true
-max_distance = 5000.0
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
-position = Vector2(1801.4, 693.6)
-scale = Vector2(-0.991567, -2.87558)
-stream = ExtResource("2_htxhm")
-autoplay = true
-max_distance = 5000.0
-
-[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
-position = Vector2(-81.6001, 721.6)
-scale = Vector2(-0.991567, -2.87558)
-stream = ExtResource("2_htxhm")
-autoplay = true
-max_distance = 5000.0
-
-[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
-position = Vector2(7579.4, 642.6)
-scale = Vector2(-0.991567, -2.87558)
-stream = ExtResource("2_htxhm")
-autoplay = true
-max_distance = 5000.0
-
-[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
-position = Vector2(9013.4, 619.6)
-scale = Vector2(-0.991567, -2.87558)
-stream = ExtResource("2_htxhm")
-autoplay = true
-max_distance = 5000.0
-
-[node name="BuyableButton" parent="." instance=ExtResource("2_0xm2m")]
+[node name="WalkerButton" parent="Map/Start" instance=ExtResource("2_0xm2m")]
 position = Vector2(-137, 159)
 buyable_id = "walker0"
 buyable_name = "Potasium Walker"
 price = 0
 
-[node name="BuyableButton2" parent="." instance=ExtResource("2_0xm2m")]
+[node name="WalkerUpgradeButton" parent="Map/Start" instance=ExtResource("2_0xm2m")]
 position = Vector2(1141, 115)
 buyable_id = "walker0_upgrade0"
 buyable_name = "Potasium Walker Upgrade"
 price = 10
 requires = Array[String](["walker0"])
 
-[node name="BuyableButton3" parent="." instance=ExtResource("2_0xm2m")]
+[node name="Walker" type="Node2D" parent="Map/Start"]
+position = Vector2(558, 120)
+script = ExtResource("3_lquwl")
+id = "walker0"
+
+[node name="Stage" type="Sprite2D" parent="Map/Start/Walker"]
+texture = ExtResource("3_h2yge")
+
+[node name="Potasium" type="AnimatedSprite2D" parent="Map/Start/Walker"]
+position = Vector2(-190, -30)
+scale = Vector2(0.744444, 0.744444)
+sprite_frames = SubResource("SpriteFrames_h2yge")
+animation = &"idle"
+
+[node name="MusicButton" parent="Map/Start" instance=ExtResource("2_0xm2m")]
 position = Vector2(2537, 98)
 buyable_id = "music_man"
 buyable_name = "Music"
 price = 0
 
-[node name="Buyable2" type="Node2D" parent="."]
+[node name="MusicBuyable" type="Node2D" parent="Map/Start"]
+position = Vector2(2537, 98)
+script = ExtResource("16_074og")
+id = "music_man"
+metadata/_custom_type_script = "uid://de7j141xed3p4"
+
+[node name="MusicGuy" type="Sprite2D" parent="Map/Start/MusicBuyable"]
+position = Vector2(-178, 352)
+scale = Vector2(0.500001, 0.504167)
+texture = ExtResource("15_2cqfq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Start/MusicBuyable/MusicGuy"]
+libraries = {
+&"": SubResource("AnimationLibrary_82xsv")
+}
+autoplay = "dance"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map/Start/MusicBuyable"]
+
+[node name="ShopKeeper" type="AnimatedSprite2D" parent="Map/Start"]
+position = Vector2(2112, 431)
+sprite_frames = SubResource("SpriteFrames_ryguw")
+animation = &"dance"
+autoplay = "default"
+script = ExtResource("15_074og")
+
+[node name="Ground" type="StaticBody2D" parent="Map/Start"]
+
+[node name="Polygon2D" type="Polygon2D" parent="Map/Start/Ground"]
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Start/Ground"]
+polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="Hell" type="Node2D" parent="Map"]
+
+[node name="DeathBuyable" type="Node2D" parent="Map/Hell"]
 position = Vector2(-2170, 5945)
 script = ExtResource("4_jq2sk")
 id = "deathbutton"
 metadata/_custom_type_script = "uid://de7j141xed3p4"
 
-[node name="BuyableButton4" parent="." instance=ExtResource("2_0xm2m")]
+[node name="DeathButton" parent="Map/Hell" instance=ExtResource("2_0xm2m")]
 position = Vector2(-2170, 5945)
 buyable_id = "deathbutton"
 buyable_name = "Die.. At a price."
 price = 5
 stay_on_buy = true
 
-[node name="Walker" type="Node2D" parent="."]
-position = Vector2(558, 120)
-script = ExtResource("3_lquwl")
-id = "walker0"
+[node name="the sponges" type="Node2D" parent="Map/Hell"]
 
-[node name="Stage" type="Sprite2D" parent="Walker"]
-texture = ExtResource("3_h2yge")
+[node name="Sponge1" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(-2580, 5916)
+scale = Vector2(0.660714, 0.617155)
+texture = ExtResource("19_seu75")
 
-[node name="Potasium" type="AnimatedSprite2D" parent="Walker"]
-position = Vector2(-190, -30)
-scale = Vector2(0.744444, 0.744444)
-sprite_frames = SubResource("SpriteFrames_h2yge")
-animation = &"idle"
+[node name="Sponge2" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(-1564, 5903)
+scale = Vector2(0.728426, 0.728426)
+texture = ExtResource("20_htxhm")
+
+[node name="Sponge3" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(-679, 5899)
+scale = Vector2(0.873288, 0.851682)
+texture = ExtResource("21_jq2sk")
+
+[node name="Sponge4" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(93, 5900)
+scale = Vector2(0.816354, 0.866782)
+texture = ExtResource("22_4k2k6")
+
+[node name="Sponge5" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(749, 5894)
+texture = ExtResource("23_0rl1p")
+
+[node name="Sponge6" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(1441, 5899)
+texture = ExtResource("24_ok6jj")
+
+[node name="Sponge7" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(2153, 5904)
+texture = ExtResource("25_facbu")
+
+[node name="Sponge8" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(2893, 5895)
+texture = ExtResource("26_b1qrp")
+
+[node name="Sponge9" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(3524, 5900)
+texture = ExtResource("27_come4")
+
+[node name="Sponge10" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(4182, 5889)
+scale = Vector2(0.760135, 0.760135)
+texture = ExtResource("28_h8e4i")
+
+[node name="Sponge11" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(4971, 5880)
+scale = Vector2(0.86965, 0.944444)
+texture = ExtResource("29_4lmeg")
+
+[node name="Sponge12" type="Sprite2D" parent="Map/Hell/the sponges"]
+z_index = -1
+position = Vector2(5772, 5910)
+scale = Vector2(1.69718, 1.69718)
+texture = ExtResource("30_0cp0l")
+
+[node name="Dawko1" type="Sprite2D" parent="Map/Hell/the sponges"]
+position = Vector2(6826, 5799)
+scale = Vector2(4.05422, 4.05422)
+texture = ExtResource("31_d2t1y")
+
+[node name="Ground" type="StaticBody2D" parent="Map/Hell"]
+
+[node name="Polygon2D" type="Polygon2D" parent="Map/Hell/Ground"]
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Hell/Ground"]
+polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Map/Hell/Ground"]
+position = Vector2(-2547.4, 5695.4)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-175, 480, 9039.4, 472.6, 8992.4, 761.6, -71, 790)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/Hell/Ground"]
+position = Vector2(-2560.4, 5691.4)
+polygon = PackedVector2Array(-161.6, 483.6, 9048.4, 461.6, 9021.4, 761.6, -71, 790)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map/Hell/Ground/CollisionPolygon2D2"]
+position = Vector2(4872.4, 684.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("2_htxhm")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Map/Hell/Ground/CollisionPolygon2D2"]
+position = Vector2(1801.4, 693.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("2_htxhm")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="Map/Hell/Ground/CollisionPolygon2D2"]
+position = Vector2(-81.6001, 721.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("2_htxhm")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Map/Hell/Ground/CollisionPolygon2D2"]
+position = Vector2(7579.4, 642.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("2_htxhm")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="Map/Hell/Ground/CollisionPolygon2D2"]
+position = Vector2(9013.4, 619.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("2_htxhm")
+autoplay = true
+max_distance = 5000.0
+
+[node name="Player" parent="." instance=ExtResource("1_h2yge")]
+position = Vector2(679, 435)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -307,103 +422,3 @@ offset_bottom = 23.0
 text = "MONEY: 0$"
 label_settings = SubResource("LabelSettings_lquwl")
 script = ExtResource("6_7mycd")
-
-[node name="shopKeeper" type="AnimatedSprite2D" parent="."]
-position = Vector2(2112, 431)
-sprite_frames = SubResource("SpriteFrames_ryguw")
-animation = &"dance"
-autoplay = "default"
-script = ExtResource("15_074og")
-
-[node name="Musicman" type="Node2D" parent="."]
-position = Vector2(2537, 98)
-script = ExtResource("16_074og")
-id = "music_man"
-metadata/_custom_type_script = "uid://de7j141xed3p4"
-
-[node name="musicGuy" type="Sprite2D" parent="Musicman"]
-position = Vector2(-178, 352)
-scale = Vector2(0.500001, 0.504167)
-texture = ExtResource("15_2cqfq")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Musicman/musicGuy"]
-libraries = {
-&"": SubResource("AnimationLibrary_82xsv")
-}
-autoplay = "dance"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Musicman"]
-
-[node name="the sponges" type="Node2D" parent="."]
-
-[node name="Sponge1" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(-2580, 5916)
-scale = Vector2(0.660714, 0.617155)
-texture = ExtResource("19_seu75")
-
-[node name="Sponge2" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(-1564, 5903)
-scale = Vector2(0.728426, 0.728426)
-texture = ExtResource("20_htxhm")
-
-[node name="Sponge3" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(-679, 5899)
-scale = Vector2(0.873288, 0.851682)
-texture = ExtResource("21_jq2sk")
-
-[node name="Sponge4" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(93, 5900)
-scale = Vector2(0.816354, 0.866782)
-texture = ExtResource("22_4k2k6")
-
-[node name="Sponge5" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(749, 5894)
-texture = ExtResource("23_0rl1p")
-
-[node name="Sponge6" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(1441, 5899)
-texture = ExtResource("24_ok6jj")
-
-[node name="Sponge7" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(2153, 5904)
-texture = ExtResource("25_facbu")
-
-[node name="Sponge8" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(2893, 5895)
-texture = ExtResource("26_b1qrp")
-
-[node name="Sponge9" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(3524, 5900)
-texture = ExtResource("27_come4")
-
-[node name="Sponge10" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(4182, 5889)
-scale = Vector2(0.760135, 0.760135)
-texture = ExtResource("28_h8e4i")
-
-[node name="Sponge11" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(4971, 5880)
-scale = Vector2(0.86965, 0.944444)
-texture = ExtResource("29_4lmeg")
-
-[node name="Sponge12" type="Sprite2D" parent="the sponges"]
-z_index = -1
-position = Vector2(5772, 5910)
-scale = Vector2(1.69718, 1.69718)
-texture = ExtResource("30_0cp0l")
-
-[node name="Dawko1" type="Sprite2D" parent="the sponges"]
-position = Vector2(6826, 5799)
-scale = Vector2(4.05422, 4.05422)
-texture = ExtResource("31_d2t1y")

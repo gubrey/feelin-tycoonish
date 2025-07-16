@@ -1,8 +1,9 @@
 extends Buyable
+
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 var songs: Array [AudioStream] = [preload("res://buyables/music_guy/music/Eggs.ogg"), preload("res://buyables/music_guy/music/Hit It.ogg"), preload("res://buyables/music_guy/music/Video Game 1.ogg"), preload("res://buyables/music_guy/music/Widge.ogg")]
+
 func _on_buy():
-	print('test')
 	while true:
 		audio_stream_player_2d.stream = songs.pick_random()
 		audio_stream_player_2d.play()
