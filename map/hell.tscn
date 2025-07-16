@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://crc7jr6ql6fna"]
+[gd_scene load_steps=18 format=3 uid="uid://crc7jr6ql6fna"]
 
 [ext_resource type="Script" uid="uid://bi7q8kx45r5ul" path="res://buyables/death buyable.gd" id="1_05ulx"]
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_4hjx4"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://4rirvg268xtu" path="res://map/hell/sponge 12.png" id="14_25rhc"]
 [ext_resource type="Texture2D" uid="uid://b75r6ot06rweo" path="res://map/hell/dawko 1.png" id="15_c7ooc"]
 [ext_resource type="AudioStream" uid="uid://b8cwiuu853e6k" path="res://map/hell/Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3" id="16_3eect"]
+[ext_resource type="Script" uid="uid://bbv8q4kwkanh2" path="res://map/dawko_1.gd" id="16_4hjx4"]
 
 [node name="Hell" type="Node2D"]
 
@@ -106,6 +107,7 @@ texture = ExtResource("14_25rhc")
 position = Vector2(6826, 5799)
 scale = Vector2(4.05422, 4.05422)
 texture = ExtResource("15_c7ooc")
+script = ExtResource("16_4hjx4")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 
