@@ -1,0 +1,161 @@
+[gd_scene load_steps=17 format=3 uid="uid://crc7jr6ql6fna"]
+
+[ext_resource type="Script" uid="uid://bi7q8kx45r5ul" path="res://buyables/death buyable.gd" id="1_05ulx"]
+[ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_4hjx4"]
+[ext_resource type="Texture2D" uid="uid://bd7xgi03xif6i" path="res://map/hell/sponge 1.png" id="3_0gfp7"]
+[ext_resource type="Texture2D" uid="uid://ikecg1tctjsm" path="res://map/hell/sponge 2.png" id="4_oobf3"]
+[ext_resource type="Texture2D" uid="uid://cp0j1q3uikte0" path="res://map/hell/sponge 3.png" id="5_tn6sd"]
+[ext_resource type="Texture2D" uid="uid://4qwt32l80ctg" path="res://map/hell/sponge 4.png" id="6_wv7gc"]
+[ext_resource type="Texture2D" uid="uid://bj1g7ei4iyog0" path="res://map/hell/sponge 5.png" id="7_awhbo"]
+[ext_resource type="Texture2D" uid="uid://b3sbydiijxs2r" path="res://map/hell/sponge 6.png" id="8_odvdo"]
+[ext_resource type="Texture2D" uid="uid://cfr8lsxnpdt7d" path="res://map/hell/sponge 7.png" id="9_4rdd4"]
+[ext_resource type="Texture2D" uid="uid://bft8682ccfn5h" path="res://map/hell/sponge 8.png" id="10_nftfw"]
+[ext_resource type="Texture2D" uid="uid://dmmms8ymupqej" path="res://map/hell/sponge 9.png" id="11_sxaul"]
+[ext_resource type="Texture2D" uid="uid://d1hahludg4ygf" path="res://map/hell/sponge 10.png" id="12_sumad"]
+[ext_resource type="Texture2D" uid="uid://negygyvqpiq2" path="res://map/hell/sponge 11.png" id="13_sr8do"]
+[ext_resource type="Texture2D" uid="uid://4rirvg268xtu" path="res://map/hell/sponge 12.png" id="14_25rhc"]
+[ext_resource type="Texture2D" uid="uid://b75r6ot06rweo" path="res://map/hell/dawko 1.png" id="15_c7ooc"]
+[ext_resource type="AudioStream" uid="uid://b8cwiuu853e6k" path="res://map/hell/Deltarune Chapter 2 OST - Flashback (Alternate Route) 4.mp3" id="16_3eect"]
+
+[node name="Hell" type="Node2D"]
+
+[node name="DeathBuyable" type="Node2D" parent="."]
+position = Vector2(-2170, 5945)
+script = ExtResource("1_05ulx")
+id = "deathbutton"
+stay_on_buy = true
+metadata/_custom_type_script = "uid://de7j141xed3p4"
+
+[node name="DeathButton" parent="." instance=ExtResource("2_4hjx4")]
+position = Vector2(-2170, 5945)
+buyable_id = "deathbutton"
+buyable_name = "Die.. At a price."
+price = 2
+stay_on_buy = true
+
+[node name="the sponges" type="Node2D" parent="."]
+
+[node name="Sponge1" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(-2580, 5916)
+scale = Vector2(0.660714, 0.617155)
+texture = ExtResource("3_0gfp7")
+
+[node name="Sponge2" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(-1564, 5903)
+scale = Vector2(0.728426, 0.728426)
+texture = ExtResource("4_oobf3")
+
+[node name="Sponge3" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(-679, 5899)
+scale = Vector2(0.873288, 0.851682)
+texture = ExtResource("5_tn6sd")
+
+[node name="Sponge4" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(93, 5900)
+scale = Vector2(0.816354, 0.866782)
+texture = ExtResource("6_wv7gc")
+
+[node name="Sponge5" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(749, 5894)
+texture = ExtResource("7_awhbo")
+
+[node name="Sponge6" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(1441, 5899)
+texture = ExtResource("8_odvdo")
+
+[node name="Sponge7" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(2153, 5904)
+texture = ExtResource("9_4rdd4")
+
+[node name="Sponge8" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(2893, 5895)
+texture = ExtResource("10_nftfw")
+
+[node name="Sponge9" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(3524, 5900)
+texture = ExtResource("11_sxaul")
+
+[node name="Sponge10" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(4182, 5889)
+scale = Vector2(0.760135, 0.760135)
+texture = ExtResource("12_sumad")
+
+[node name="Sponge11" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(4971, 5880)
+scale = Vector2(0.86965, 0.944444)
+texture = ExtResource("13_sr8do")
+
+[node name="Sponge12" type="Sprite2D" parent="the sponges"]
+z_index = -1
+position = Vector2(5772, 5910)
+scale = Vector2(1.69718, 1.69718)
+texture = ExtResource("14_25rhc")
+
+[node name="Dawko1" type="Sprite2D" parent="the sponges"]
+position = Vector2(6826, 5799)
+scale = Vector2(4.05422, 4.05422)
+texture = ExtResource("15_c7ooc")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground"]
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
+polygon = PackedVector2Array(-54, 516, 32, 509, 357, 320, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Ground"]
+position = Vector2(-2547.4, 5695.4)
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-175, 480, 9039.4, 472.6, 8992.4, 761.6, -71, 790)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2(-2560.4, 5691.4)
+polygon = PackedVector2Array(-161.6, 483.6, 9048.4, 461.6, 9021.4, 761.6, -71, 790)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
+position = Vector2(4872.4, 684.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("16_3eect")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
+position = Vector2(1801.4, 693.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("16_3eect")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
+position = Vector2(-81.6001, 721.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("16_3eect")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
+position = Vector2(7579.4, 642.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("16_3eect")
+autoplay = true
+max_distance = 5000.0
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="Ground/CollisionPolygon2D2"]
+position = Vector2(9013.4, 619.6)
+scale = Vector2(-0.991567, -2.87558)
+stream = ExtResource("16_3eect")
+autoplay = true
+max_distance = 5000.0
