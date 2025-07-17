@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdukqnlgcdg3b"]
+[gd_scene load_steps=4 format=3 uid="uid://bdukqnlgcdg3b"]
 
 [ext_resource type="PackedScene" uid="uid://cmubwil3dph06" path="res://map/start.tscn" id="1_a0dt8"]
 [ext_resource type="PackedScene" uid="uid://crc7jr6ql6fna" path="res://map/hell.tscn" id="2_4hjbm"]
+[ext_resource type="PackedScene" uid="uid://gmwttqxt1a4p" path="res://map/sock_zone.tscn" id="3_4hjbm"]
 
 [node name="Map" type="Node2D"]
 
 [node name="Start" parent="." instance=ExtResource("1_a0dt8")]
 
 [node name="Hell" parent="." instance=ExtResource("2_4hjbm")]
+
+[node name="Sock zone" parent="." instance=ExtResource("3_4hjbm")]
