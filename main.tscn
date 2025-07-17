@@ -5,9 +5,9 @@
 [ext_resource type="FontFile" uid="uid://bx73k41dw5dyn" path="res://font/M6X11.TTF" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://bw1rj5jqai53o" path="res://player/death.png" id="4_SCARY"]
 [ext_resource type="Script" uid="uid://cgl4sksebqdvf" path="res://ui/death_screen.gd" id="5_7mycd"]
-[ext_resource type="Script" path="res://ui/money2_label.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bl8d8yiekftd3" path="res://ui/money2_label.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://bl15qvkrwqnrk" path="res://ui/money_label.gd" id="6_7mycd"]
-[ext_resource type="Script" path="res://ui/dashtext.gd" id="6_272bh"]
+[ext_resource type="Script" uid="uid://c1jm5p82t2a4s" path="res://ui/dashtext.gd" id="6_272bh"]
 [ext_resource type="AudioStream" uid="uid://dyxs6m25nlr1c" path="res://player/death.mp3" id="6_kek77"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
@@ -40,7 +40,7 @@ offset_top = -1245.0
 offset_right = 4163.0
 offset_bottom = 1763.0
 mouse_filter = 1
-color = Color(0.529412, 0.411765, 0.227451, 1)
+color = Color(0.728503, 0.687952, 0.603378, 1)
 
 [node name="Map" parent="." instance=ExtResource("1_1bvp3")]
 
@@ -108,14 +108,18 @@ offset_bottom = 101.0
 text = "we got a sequel to moeny before gta6"
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
-modulate = Color(1, 1, 1, 0.0470588)
-offset_left = 674.0
-offset_top = 576.0
-offset_right = 1042.0
-offset_bottom = 651.0
+modulate = Color(1, 1, 1, 0.145098)
+offset_left = 439.0
+offset_top = 559.0
+offset_right = 1014.0
+offset_bottom = 660.0
+rotation = 0.0174533
 scale = Vector2(1.25, 1)
 text = "this game is sponsored by Isabel Colegate British author and literary agent
+
+Activate windos
 "
+horizontal_alignment = 2
 
 [node name="dashtext" type="Label" parent="CanvasLayer"]
 offset_left = 77.0
