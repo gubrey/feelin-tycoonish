@@ -109,10 +109,17 @@ text = "we got a sequel to moeny before gta6"
 
 [node name="Label2" type="Label" parent="CanvasLayer"]
 modulate = Color(1, 1, 1, 0.0470588)
-offset_left = 674.0
-offset_top = 576.0
-offset_right = 1042.0
-offset_bottom = 651.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -478.0
+offset_top = -72.0
+offset_right = -110.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 0
 scale = Vector2(1.25, 1)
 text = "this game is sponsored by Isabel Colegate British author and literary agent
 "
