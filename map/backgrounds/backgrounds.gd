@@ -14,6 +14,8 @@ func _fade_all_bgs(bg_name: String):
 	fade_tween = create_tween()
 	
 	for child: Node2D in get_children():
+		child.visible = true
+		
 		var target = 0.0 if child.name != bg_name else 1.0
 		
 		fade_tween.parallel().tween_property(child, "modulate", Color(
@@ -22,3 +24,8 @@ func _fade_all_bgs(bg_name: String):
 			1.0,
 			target
 		), FADE_LENGTH)
+		
+		fade_tween.finished.connect(func():
+			if target == 0.0:
+				child.visible = false
+		)
