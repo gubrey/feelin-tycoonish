@@ -39,3 +39,6 @@ func _process(_delta: float) -> void:
 	else:
 		Engine.time_scale = 1
 	
+	if Input.is_action_just_pressed("debug_money"):
+		money += 1000
+	
