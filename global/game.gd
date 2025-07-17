@@ -26,6 +26,7 @@ var player:Player:
 
 signal player_created
 signal buyable_bought
+signal player_died # use kill_player() to kill the player!!!!
 
 # function to call when you buy a buyable
 func buy_buyable(id: String) -> void:
@@ -43,4 +44,8 @@ func _process(_delta: float) -> void:
 		# if we just pressed "\"
 		if Input.is_action_just_pressed("debug_money"):
 			money += 1000
-	
+
+# call this to, you guessed it, kill the player!
+func kill_player():
+	money = 0
+	player_died.emit()

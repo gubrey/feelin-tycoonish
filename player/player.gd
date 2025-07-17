@@ -10,9 +10,15 @@ const JUMP_VELOCITY = -400.0
 # the dollar sign means its getting a child node, think of it like a relative file path
 @onready var head: Sprite2D = $Head 
 
+var spawn_pos: Vector2
+
 # runs when the player is created
 func _ready() -> void:
+	spawn_pos = position # set the spawn pos to the players default position
+	
 	Game.player = self # sets the global player variable to this node
+	
+	Game.player_died.connect(_respawn_player)
 
 # if you're confused what "delta" means here:
 # https://www.reddit.com/r/gamedev/comments/p1tm4/super_newbish_questionwhat_is_delta_time_how_does/
@@ -51,5 +57,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		head.flip_h = true
 	#endregion
-	
-	
+
+func _respawn_player():
+	position = spawn_pos
