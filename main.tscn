@@ -5,9 +5,9 @@
 [ext_resource type="FontFile" uid="uid://bx73k41dw5dyn" path="res://font/M6X11.TTF" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://bw1rj5jqai53o" path="res://player/death.png" id="4_SCARY"]
 [ext_resource type="Script" uid="uid://cgl4sksebqdvf" path="res://ui/death_screen.gd" id="5_7mycd"]
-[ext_resource type="Script" uid="uid://bl8d8yiekftd3" path="res://ui/money2_label.gd" id="5_lquwl"]
+[ext_resource type="Script" path="res://ui/money2_label.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://bl15qvkrwqnrk" path="res://ui/money_label.gd" id="6_7mycd"]
-[ext_resource type="Script" uid="uid://c1jm5p82t2a4s" path="res://ui/dashtext.gd" id="6_272bh"]
+[ext_resource type="Script" path="res://ui/dashtext.gd" id="6_272bh"]
 [ext_resource type="AudioStream" uid="uid://dyxs6m25nlr1c" path="res://player/death.mp3" id="6_kek77"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
