@@ -1,0 +1,3 @@
+when flag clicked
+do a dance
+stop
