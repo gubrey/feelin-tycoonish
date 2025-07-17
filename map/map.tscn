@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdukqnlgcdg3b"]
+[gd_scene load_steps=7 format=3 uid="uid://bdukqnlgcdg3b"]
 
 [ext_resource type="PackedScene" uid="uid://cmubwil3dph06" path="res://map/start.tscn" id="1_a0dt8"]
+[ext_resource type="PackedScene" uid="uid://dhkfs57qbmi38" path="res://map/backgrounds/background.tscn" id="1_kffv2"]
 [ext_resource type="PackedScene" uid="uid://crc7jr6ql6fna" path="res://map/hell.tscn" id="2_4hjbm"]
 [ext_resource type="Script" uid="uid://b7vwm3thj0fwj" path="res://map/death_barrier.gd" id="3_4hjbm"]
 [ext_resource type="PackedScene" uid="uid://gmwttqxt1a4p" path="res://map/sock_zone.tscn" id="4_9as7b"]
@@ -8,6 +9,8 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a0dt8"]
 
 [node name="Map" type="Node2D"]
+
+[node name="Backgrounds" parent="." instance=ExtResource("1_kffv2")]
 
 [node name="Start" parent="." instance=ExtResource("1_a0dt8")]
 
