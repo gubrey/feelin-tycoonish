@@ -5,6 +5,10 @@ extends CharacterBody2D
 # they are usually denoted with CAPITALS
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const DASH_SPEED = 1200.0
+
+var dashtimer = 0
+var candash = false
 
 # these are on ready variables, these get set when the object is created
 # the dollar sign means its getting a child node, think of it like a relative file path
@@ -19,21 +23,36 @@ func _ready() -> void:
 	Game.player = self # sets the global player variable to this node
 	
 	Game.player_died.connect(_respawn_player)
+	Game.buyable_bought.connect(func ():
+		if "dash" in Game.buyable_bought_list:
+			candash = true
+	)
 
 # if you're confused what "delta" means here:
 # https://www.reddit.com/r/gamedev/comments/p1tm4/super_newbish_questionwhat_is_delta_time_how_does/
 func _physics_process(delta: float) -> void:
+	dashtimer -= delta
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+	if Input.is_action_just_pressed("player_dash") and dashtimer <= 0 and candash:
+		$squueueuee.play()
+		dashtimer = 0.5
+		velocity = (get_global_mouse_position() - position).normalized() * DASH_SPEED
 	
 	var direction := Input.get_axis("player_left", "player_right") # gets a value between -1 and 1
-	if direction != 0: # if its not 0 (aka we're moving)
-		velocity.x = direction * SPEED
-	else: # if we arent pressing anything
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if dashtimer > 0.25:
+		# this is bugged but too funny to fix
+		rotation = Time.get_ticks_msec() % 360
+	else:
+		rotation = move_toward(rotation, 0, 100)
+		if direction != 0: # if its not 0 (aka we're moving)
+			velocity.x = direction * SPEED
+		else: # if we arent pressing anything
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	# handles all the collision math for us, how nice!
 	move_and_slide()

@@ -5,6 +5,7 @@ extends Node
 # its created outside of the game tree, and always exists
 
 var money:int = 0
+var money2:int = 0
 
 # every buyable thats been bought
 var buyable_bought_list:Array[String]
