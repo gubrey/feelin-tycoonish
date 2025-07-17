@@ -1,10 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdukqnlgcdg3b"]
+[gd_scene load_steps=6 format=3 uid="uid://bdukqnlgcdg3b"]
 
 [ext_resource type="PackedScene" uid="uid://cmubwil3dph06" path="res://map/start.tscn" id="1_a0dt8"]
 [ext_resource type="PackedScene" uid="uid://crc7jr6ql6fna" path="res://map/hell.tscn" id="2_4hjbm"]
+[ext_resource type="Script" uid="uid://b7vwm3thj0fwj" path="res://map/death_barrier.gd" id="3_4hjbm"]
+[ext_resource type="PackedScene" uid="uid://gmwttqxt1a4p" path="res://map/sock_zone.tscn" id="4_9as7b"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_a0dt8"]
 
 [node name="Map" type="Node2D"]
 
 [node name="Start" parent="." instance=ExtResource("1_a0dt8")]
 
 [node name="Hell" parent="." instance=ExtResource("2_4hjbm")]
+
+[node name="DeathBarrier" type="Area2D" parent="."]
+position = Vector2(2076, 8114)
+script = ExtResource("3_4hjbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBarrier"]
+shape = SubResource("WorldBoundaryShape2D_a0dt8")
+
+[node name="Sock zone" parent="." instance=ExtResource("4_9as7b")]
+
+[connection signal="body_shape_entered" from="DeathBarrier" to="DeathBarrier" method="_on_body_shape_entered"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://gmwttqxt1a4p"]
+
+[ext_resource type="Texture2D" uid="uid://nsqeutbe0s4e" path="res://map/hell/sox2.png" id="1_h8u1v"]
+[ext_resource type="Texture2D" uid="uid://ok43e78r8kiw" path="res://map/hell/sock2.jpg" id="2_toctr"]
+[ext_resource type="Texture2D" uid="uid://b54wohynwr0yy" path="res://map/hell/sock.jpg" id="3_t5io7"]
+[ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="4_toctr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n3xu8"]
+font_size = 24
+
+[node name="Sock zone" type="Node2D"]
+
+[node name="Sox2" type="Sprite2D" parent="."]
+position = Vector2(4405, 245)
+texture = ExtResource("1_h8u1v")
+
+[node name="Label" type="Label" parent="Sox2"]
+offset_left = -476.0
+offset_top = -214.0
+offset_right = 266.0
+offset_bottom = -69.0
+text = "welcome to my sock shop
+
+youcant buy anything because i dont know how to program that
+hi"
+label_settings = SubResource("LabelSettings_n3xu8")
+
+[node name="Sock2" type="Sprite2D" parent="Sox2"]
+position = Vector2(-361, 14)
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("2_toctr")
+
+[node name="Sock" type="Sprite2D" parent="Sox2"]
+position = Vector2(-593, 33)
+texture = ExtResource("3_t5io7")
+
+[node name="Ground2" type="StaticBody2D" parent="."]
+position = Vector2(2642, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground2"]
+color = Color(0.74902, 0.392157, 0.0588235, 1)
+polygon = PackedVector2Array(-54, 516, 32, 509, 311, 553, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground2"]
+polygon = PackedVector2Array(-54, 516, 32, 509, 310, 553, 588, 514, 2735, 506, 2734, 769, -71, 790)
+
+[node name="WalkerButton" parent="." instance=ExtResource("4_toctr")]
+position = Vector2(3033, 205)
+buyable_id = "dash"
+buyable_name = "celeste dash mechanic"
+price = 50
