@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cfqdcb4gp45i6" path="res://map/hell/costume4.svg" id="17_0gfp7"]
 [ext_resource type="Texture2D" uid="uid://big5vvkqvlqx4" path="res://map/hell/costume1.svg" id="19_oobf3"]
 [ext_resource type="Script" uid="uid://cxdg5ouw20ydq" path="res://map/hell/spear.gd" id="20_wv7gc"]
-[ext_resource type="Script" uid="uid://cxu48gx35qk0m" path="res://map/honse_buyable.gd" id="22_awhbo"]
+[ext_resource type="Script" path="res://map/honse_buyable.gd" id="22_awhbo"]
 [ext_resource type="Texture2D" uid="uid://c8a10hs1orckw" path="res://buyables/honse/honse.png" id="23_odvdo"]
 [ext_resource type="AudioStream" uid="uid://dfxxjxjwusk5a" path="res://buyables/honse/honse_sfx.mp3" id="24_4rdd4"]
 
