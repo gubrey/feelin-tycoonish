@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmgekgyf1l3h1"
-path="res://.godot/imported/i changed bendy.png-b5be9a427ddd86e8e1d2807727d5b035.ctex"
+uid="uid://dtsfliorhirpg"
+path="res://.godot/imported/big fat lard.png-27d061892488028e76cdc0e8b17feb48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://i changed bendy.png"
-dest_files=["res://.godot/imported/i changed bendy.png-b5be9a427ddd86e8e1d2807727d5b035.ctex"]
+source_file="res://npc/big fat lard.png"
+dest_files=["res://.godot/imported/big fat lard.png-27d061892488028e76cdc0e8b17feb48.ctex"]
 
 [params]
 

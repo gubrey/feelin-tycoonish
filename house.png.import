@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmgekgyf1l3h1"
-path="res://.godot/imported/i changed bendy.png-b5be9a427ddd86e8e1d2807727d5b035.ctex"
+uid="uid://c37dfa7ulse7q"
+path="res://.godot/imported/house.png-ee996fb537f99d640996d5adc78a6c38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://i changed bendy.png"
-dest_files=["res://.godot/imported/i changed bendy.png-b5be9a427ddd86e8e1d2807727d5b035.ctex"]
+source_file="res://house.png"
+dest_files=["res://.godot/imported/house.png-ee996fb537f99d640996d5adc78a6c38.ctex"]
 
 [params]
 
