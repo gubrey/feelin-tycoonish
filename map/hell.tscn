@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://crc7jr6ql6fna"]
+[gd_scene load_steps=25 format=3 uid="uid://crc7jr6ql6fna"]
 
 [ext_resource type="Script" uid="uid://bi7q8kx45r5ul" path="res://buyables/death buyable.gd" id="1_05ulx"]
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="2_4hjx4"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://cxdg5ouw20ydq" path="res://map/hell/spear.gd" id="20_wv7gc"]
 [ext_resource type="Script" uid="uid://cxu48gx35qk0m" path="res://map/honse_buyable.gd" id="22_awhbo"]
 [ext_resource type="Texture2D" uid="uid://c8a10hs1orckw" path="res://buyables/honse/honse.png" id="23_odvdo"]
+[ext_resource type="AudioStream" uid="uid://dfxxjxjwusk5a" path="res://buyables/honse/honse_sfx.mp3" id="24_4rdd4"]
 
 [node name="Hell" type="Node2D"]
 
@@ -583,10 +584,15 @@ id = "honse"
 metadata/_custom_type_script = "uid://de7j141xed3p4"
 
 [node name="Honse" type="Sprite2D" parent="HonseBuyable"]
+visible = false
 position = Vector2(-684, -277)
 texture = ExtResource("23_odvdo")
 centered = false
-offset = Vector2(-30000, 30000)
+offset = Vector2(-100, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="HonseBuyable"]
+stream = ExtResource("24_4rdd4")
+volume_db = 5.0
 
 [node name="HonseButton" parent="." instance=ExtResource("2_4hjx4")]
 position = Vector2(13738, 4611)
