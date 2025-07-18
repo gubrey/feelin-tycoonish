@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f3pmjtvw13jp"
-path="res://.godot/imported/6.png-c93efc31d20748db4b252a3d45160ff8.ctex"
+uid="uid://cuil247wm6n41"
+path.s3tc="res://.godot/imported/mainbg.png-92eb72f33ed787773ae298f2441d2634.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://do not delete/6.png"
-dest_files=["res://.godot/imported/6.png-c93efc31d20748db4b252a3d45160ff8.ctex"]
+source_file="res://map/mainbg.png"
+dest_files=["res://.godot/imported/mainbg.png-92eb72f33ed787773ae298f2441d2634.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

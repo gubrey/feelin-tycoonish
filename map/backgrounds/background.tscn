@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhkfs57qbmi38"]
+
+[ext_resource type="Script" uid="uid://dk371qwdblp0q" path="res://map/backgrounds/backgrounds.gd" id="1_1koha"]
+[ext_resource type="Shader" uid="uid://cxn521o2h6hwo" path="res://shaders/scary.gdshader" id="1_ix8yj"]
+[ext_resource type="Texture2D" uid="uid://bkilb0w4yo2fo" path="res://relly.png" id="2_efkv3"]
+[ext_resource type="Texture2D" uid="uid://cuil247wm6n41" path="res://map/mainbg.png" id="3_0wqav"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7lyie"]
+shader = ExtResource("1_ix8yj")
+shader_parameter/amplitude = 1.0
+shader_parameter/move_amount = 2.0
+shader_parameter/speed = 0.1
+
+[sub_resource type="Gradient" id="Gradient_5jdw0"]
+offsets = PackedFloat32Array(0, 0.279851, 0.742537, 1)
+colors = PackedColorArray(0.454929, 0.351106, 0.187989, 1, 0.529412, 0.411765, 0.227451, 1, 0.529412, 0.411765, 0.227451, 1, 0.454902, 0.352941, 0.188235, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kxmgb"]
+gradient = SubResource("Gradient_5jdw0")
+width = 200
+height = 1
+
+[node name="Backgrounds" type="Node2D"]
+z_index = -4096
+z_as_relative = false
+script = ExtResource("1_1koha")
+
+[node name="HellBG" type="Parallax2D" parent="."]
+z_index = -4096
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(855, 539)
+repeat_times = 6
+
+[node name="HellBGSprite" type="Sprite2D" parent="HellBG"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_7lyie")
+scale = Vector2(0.668371, 0.748612)
+texture = ExtResource("2_efkv3")
+
+[node name="StartBG" type="Node2D" parent="."]
+
+[node name="Color" type="Parallax2D" parent="StartBG"]
+scroll_scale = Vector2(0.05, 0.05)
+scroll_offset = Vector2(-1889, -257)
+repeat_size = Vector2(1900, 1000)
+repeat_times = 3
+
+[node name="TextureRect" type="TextureRect" parent="StartBG/Color"]
+offset_left = 499.0
+offset_top = 176.0
+offset_right = 999.0
+offset_bottom = 1175.0
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_kxmgb")
+
+[node name="Image1" type="Parallax2D" parent="StartBG"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1000, 500)
+autoscroll = Vector2(-10, -8)
+repeat_times = 4
+
+[node name="Mainbg" type="Sprite2D" parent="StartBG/Image1"]
+texture = ExtResource("3_0wqav")
+
+[node name="Image2" type="Parallax2D" parent="StartBG"]
+modulate = Color(0.38, 0.586667, 1, 0.596078)
+scale = Vector2(0.845, 0.845)
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(-145, -150)
+repeat_size = Vector2(1000, 500)
+autoscroll = Vector2(-1, -0.5)
+repeat_times = 4
+
+[node name="Mainbg" type="Sprite2D" parent="StartBG/Image2"]
+texture = ExtResource("3_0wqav")
+flip_h = true
+flip_v = true

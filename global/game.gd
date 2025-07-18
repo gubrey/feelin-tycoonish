@@ -10,6 +10,9 @@ var money2:int = 0
 # every buyable thats been bought
 var buyable_bought_list:Array[String]
 
+# the name of the current background
+var current_bg: String = ""
+
 # the player may not be set immediately, so watch out when writing your code.
 # you can avoid an error by doing this before accessing Game.player:
 
@@ -27,7 +30,11 @@ var player:Player:
 
 signal player_created
 signal buyable_bought
-signal player_died # use kill_player() to kill the player!!!!
+
+## use kill_player() to kill the player!!!!
+signal player_died
+## use change_bg() to change the bg!!!! 
+signal bg_changed
 
 # function to call when you buy a buyable
 func buy_buyable(id: String) -> void:
@@ -50,3 +57,7 @@ func _process(_delta: float) -> void:
 func kill_player():
 	money = 0
 	player_died.emit()
+
+func change_bg(bg_name: String):
+	current_bg = bg_name
+	bg_changed.emit(current_bg)

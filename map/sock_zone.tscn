@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://ok43e78r8kiw" path="res://map/hell/sock2.jpg" id="2_toctr"]
 [ext_resource type="Texture2D" uid="uid://b54wohynwr0yy" path="res://map/hell/sock.jpg" id="3_t5io7"]
 [ext_resource type="PackedScene" uid="uid://dk3105wepu4p0" path="res://buyables/button/buyable_button.tscn" id="4_toctr"]
-[ext_resource type="Shader" uid="uid://babq43pmhqhvn" path="res://map/hue.gdshader" id="5_oiw30"]
-[ext_resource type="Shader" uid="uid://cxn521o2h6hwo" path="res://scary.gdshader" id="6_8006c"]
+[ext_resource type="Shader" uid="uid://babq43pmhqhvn" path="res://shaders/hue.gdshader" id="5_oiw30"]
+[ext_resource type="Shader" uid="uid://cxn521o2h6hwo" path="res://shaders/scary.gdshader" id="6_8006c"]
 [ext_resource type="Texture2D" uid="uid://b74btp8vqqqpk" path="res://portal.png" id="7_oiw30"]
-[ext_resource type="Script" uid="uid://db7m6uyrv8x35" path="res://map/temmie_flakes_reminds_me_of_jeffy.gd" id="7_qwgkx"]
-[ext_resource type="Script" uid="uid://clvt7ddbgp25l" path="res://map/press e.gd" id="9_qwgkx"]
+[ext_resource type="Script" path="res://map/temmie_flakes_reminds_me_of_jeffy.gd" id="7_qwgkx"]
+[ext_resource type="Script" path="res://map/press e.gd" id="9_qwgkx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n3xu8"]
 font_size = 24
